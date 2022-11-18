@@ -1,0 +1,91 @@
+.card--container {
+  display: flex;
+  margin: 0.5rem;
+  flex-direction: column;
+  text-align: center !important;
+  justify-content: center;
+  width: var(--card-width-1200);
+  height: auto;
+  /* cursor: pointer; */
+  overflow: hidden;
+  background-color: var(--smoke-light);
+  backdrop-filter: var(--blur-1);
+  color: var(--neutral-20);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  border: none;
+  outline: none;
+}
+.card--container:hover {
+  background-color: var(--smoke-light-black);
+  backdrop-filter: var(--blur-5);
+  color: var(--white);
+  /* outline: 0.5px solid white; */
+}
+.card--img-wrapper {
+  width: var(--card-width-1200);
+  height: var(--card-img-height);
+  overflow: hidden;
+  border-bottom: 1px solid var(--neutral-70);
+  margin-bottom: 0.5rem;
+}
+.card--name,
+.card--date,
+.card--desc {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card--name {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.card--date {
+  color: var(--neutral-30);
+  font-size: small;
+}
+.card--desc {
+  font-size: small;
+  height: 7rem;
+  overflow: hidden;
+  padding-inline: 1rem;
+}
+.card--hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--neutral-70) !important;
+}
+@media screen and (max-width: 1200px) {
+  .card--container,
+  .card--img-wrapper {
+    width: var(--card-width-1000);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card--container,
+  .card--img-wrapper {
+    width: var(--card-width-800);
+  }
+}
+@media screen and (max-width: 800px) {
+  .card--container,
+  .card--img-wrapper {
+    width: var(--card-width-600);
+  }
+}
+@media screen and (max-width: 600px) {
+  .card--container,
+  .card--img-wrapper {
+    width: var(--card-width-400);
+  }
+}

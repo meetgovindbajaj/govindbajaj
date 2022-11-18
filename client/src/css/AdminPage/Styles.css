@@ -1,0 +1,26 @@
+.admin--container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.admin--wrapper {
+  background-color: var(--smoke-black);
+  color: var(--white) !important;
+  margin: auto;
+  margin-block: 1rem;
+  backdrop-filter: var(--blur-0-5);
+  width: max(90vw, 500px);
+  height: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

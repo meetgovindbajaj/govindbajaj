@@ -1,0 +1,18 @@
+.project--container {
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: scroll;
+}
+.git--container {
+  width: 100%;
+  margin-block: 3rem;
+  height: auto;
+  background-color: var(--smoke-light-black);
+  backdrop-filter: var(--blur-5);
+  border-radius: 10px;
+  padding-block: 1rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

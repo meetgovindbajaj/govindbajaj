@@ -1,0 +1,286 @@
+/* IMPORTING FONTS ~ INTER & RAILWAY & ROBOTO*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("./Navbar/Styles.css");
+@import url("./Error/Styles.css");
+@import url("./HomePage/Styles.css");
+@import url("./AboutPage/Styles.css");
+@import url("./AdminPage/Styles.css");
+@import url("./ContactPage/Styles.css");
+@import url("./CustomCard/Styles.css");
+@import url("./ProjectPage/Styles.css");
+:root {
+  /* variables */
+  --navbar-height: 3.7rem;
+  --navbar-zIndex: 9999;
+  --navbar-video-zIndex: -99999;
+  --navbar-videoBlur-zIndex: -99998;
+  --card-width-1200: 23vw;
+  --card-width-1000: 30vw;
+  --card-width-800: 40vw;
+  --card-width-600: 55vw;
+  --card-width-400: 85vw;
+  --card-img-height: 200px;
+  --fs-large: 3rem;
+  --fs-medium: 2rem;
+  --fs-small: 1rem;
+  --fs-xsmall: 0.5rem;
+  /* special variables */
+  --smoke: hsla(0, 0%, 100%, 0.302);
+  --smoke-light: hsla(0, 0%, 100%, 0.1);
+  --smoke-black: hsla(0, 0%, 0%, 0.702);
+  --smoke-light-black: hsla(0, 0%, 0%, 0.35);
+  --blur-5: blur(5rem);
+  --blur-4: blur(4rem);
+  --blur-3: blur(3rem);
+  --blur-2: blur(2rem);
+  --blur-1: blur(1rem);
+  --blur-0-5: blur(0.5rem);
+  --blur-0-4: blur(0.4rem);
+  --blur-0-3: blur(0.3rem);
+  --blur-0-2: blur(0.2rem);
+  --blur-0-1: blur(0.1rem);
+  --ff-Inter: "Inter", "Raleway", "Roboto", sans-serif;
+  --ff-Railway: "Raleway", "Inter", "Roboto", sans-serif;
+  --ff-Roboto: "Roboto", "Raleway", "Inter", sans-serif;
+  /* colors start */
+  --black: #000000;
+  --gray: #d6d6d6;
+  --white: #ffffff;
+  --neutral-5: #f7f9fc;
+  --neutral-10: #eff2f9;
+  --neutral-15: #e7eaf4;
+  --neutral-20: #d9deeb;
+  --neutral-30: #bec4d5;
+  --neutral-40: #9fa6bb;
+  --neutral-50: #828ba2;
+  --neutral-60: #656e83;
+  --neutral-70: #495163;
+  --neutral-80: #303848;
+  --neutral-90: #1e2532;
+  --neutral-100: #0f141e;
+  --blue-10: #eaf6ff;
+  --blue-20: #c3e5fe;
+  --blue-30: #92cdfc;
+  --blue-40: #54aff8;
+  --blue-50: #1a91f0;
+  --blue-60: #1170cd;
+  --blue-70: #10529b;
+  --blue-80: #0f3871;
+  --blue-90: #0c264c;
+  --blue-100: #09162d;
+  --indigo-10: #f1f2ff;
+  --indigo-20: #dbdeff;
+  --indigo-30: #bec2fe;
+  --indigo-40: #9ba1fb;
+  --indigo-50: #7a82f5;
+  --indigo-60: #5660e8;
+  --indigo-70: #343ecc;
+  --indigo-80: #282b8f;
+  --indigo-90: #1a1c6a;
+  --indigo-100: #0e0f47;
+  --green-10: #e7f4ed;
+  --green-20: #c6e4d2;
+  --green-30: #96d0ad;
+  --green-40: #48ba75;
+  --green-50: #339d5d;
+  --green-60: #217d47;
+  --green-70: #135c37;
+  --green-80: #094025;
+  --green-90: #042b18;
+  --green-100: #01180d;
+  --amber-10: #fff2cc;
+  --amber-20: #fddb8c;
+  --amber-30: #f9ba44;
+  --amber-40: #ec930c;
+  --amber-50: #cf760d;
+  --amber-60: #a85a0e;
+  --amber-70: #7f400d;
+  --amber-80: #582c0c;
+  --amber-90: #3e1d0a;
+  --amber-100: #231007;
+  --orange-10: #feebe3;
+  --orange-20: #fdd2c0;
+  --orange-30: #fbb092;
+  --orange-40: #f68559;
+  --orange-50: #ee571d;
+  --orange-60: #bf4213;
+  --orange-70: #8b3211;
+  --orange-80: #5e240e;
+  --orange-90: #3b180b;
+  --orange-100: #1c0c06;
+  --red-10: #ffeaec;
+  --red-20: #ffd0d5;
+  --red-30: #ffacb5;
+  --red-40: #fe7d8b;
+  --red-50: #fb4458;
+  --red-60: #da0c22;
+  --red-70: #a10e1d;
+  --red-80: #6f0e19;
+  --red-90: #470c12;
+  --red-100: #24090c;
+  --beige-10: #f3f1eb;
+  --beige-20: #e1ddd2;
+  --beige-30: #cbc3b3;
+  --beige-40: #afa58f;
+  --beige-50: #968a70;
+  --beige-60: #776d59;
+  --beige-70: #575041;
+  --beige-80: #3c372d;
+  --beige-90: #27241d;
+  --beige-100: #15130f;
+  --facebook-color: #3b5998;
+  --twitter-color: #1da1f2;
+  --linkedin-color: #0077b5;
+  --youtube-color: #ff3d00;
+  --pinterest-color: #cd1f28;
+  /* colors end */
+}
+* {
+  scroll-behavior: smooth !important;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  font-family: "Inter", "Raleway", sans-serif;
+  font-smooth: auto;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: "none" !important;
+}
+a:hover {
+  color: inherit;
+  text-decoration: "none" !important;
+}
+#mbackground {
+  position: fixed;
+  inset: 0 0 0 0;
+  object-fit: cover;
+  z-index: var(--navbar-video-zIndex);
+  width: 100vw;
+  height: 100vh;
+}
+#mbackgroundblur {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: var(--smoke-light-black);
+  backdrop-filter: var(--blur-2);
+  z-index: var(--navbar-videoBlur-zIndex);
+}
+#errorWrapper {
+  margin: 5vh auto;
+  width: 90%;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  border: none;
+  outline: none;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.button--back-abs {
+  position: absolute;
+  padding: 1rem;
+}
+.MuiTooltip-tooltip {
+  background-color: var(--neutral-90) !important;
+  font-size: medium !important;
+}
+.loader {
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  inset: 0 0 0 0;
+  clip-path: circle(100% at 50% 50%);
+  background: var(--smoke-black);
+  backdrop-filter: var(--blur-5);
+  position: absolute;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+.admin--auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  flex-direction: column;
+  overflow: hidden;
+}
+.otp--container {
+  display: flex;
+  color: var(--white);
+  background-color: var(--smoke-light-black);
+  backdrop-filter: var(--blur-5);
+  width: min(98vw, 400px);
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  border: 1.5px solid white;
+  outline: 3px solid gray;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.otp--input {
+  height: 40px;
+  width: 40px;
+  margin: 1rem;
+  text-align: center;
+  border: none;
+  outline: 0.0001px solid var(--neutral-60);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+.otp--input:focus {
+  outline: 7px solid var(--neutral-60);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
