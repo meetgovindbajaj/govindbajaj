@@ -33,7 +33,7 @@ conn.once("open", () => {
 });
 
 // @routes upload file
-router.post("/upload", uploadMiddleware, async (req, res) => {
+router.post(/* link */, uploadMiddleware, async (req, res) => {
   try {
     const { file } = req;
     const { id } = file;
@@ -63,7 +63,7 @@ router.post("/upload", uploadMiddleware, async (req, res) => {
 });
 
 // @routes delete file
-router.get("/delete/:id", async (req, res) => {
+router.get(/* link */, async (req, res) => {
   try {
     if (!req.params.id || req.params.id === "undefined")
       return res.status(400).json({ status: 400, message: "no image id" });
@@ -87,7 +87,7 @@ router.get("/delete/:id", async (req, res) => {
   }
 });
 // @routes render file
-router.get("/:id", async ({ params: { id } }, res) => {
+router.get(/* link */, async ({ params: { id } }, res) => {
   try {
     if (!id || id === "undefined")
       return res
