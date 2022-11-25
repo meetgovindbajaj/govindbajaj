@@ -46,7 +46,7 @@ const App = () => {
   const getInfo = async () => {
     dispatch(setInitLoadingTrue());
     try {
-      const res = await fetch("/info", {
+      const res = await fetch(/* link */, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const App = () => {
   const getProjects = async () => {
     dispatch(setInitLoadingTrue());
     try {
-      const res = await fetch("/project", {
+      const res = await fetch(/* link */, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
