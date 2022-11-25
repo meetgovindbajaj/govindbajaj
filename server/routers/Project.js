@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Project = require("../models/Project");
 const { deleteImage } = require("../utils/gridFs");
-router.get("/", async (req, res) => {
+router.get(/* link */, async (req, res) => {
   try {
     const projects = await Project.find({});
     if (projects) {
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
       .json({ status: 500, error: true, message: error, projects: [] });
   }
 });
-router.post("/create", async (req, res) => {
+router.post(/* link */, async (req, res) => {
   try {
     const newProject = req.body;
     const createNewProject = new Project(newProject);
@@ -48,7 +48,7 @@ router.post("/create", async (req, res) => {
       .json({ status: 500, error: true, message: error, projects: [] });
   }
 });
-router.post("/delete", async (req, res) => {
+router.post(/* link */, async (req, res) => {
   const { id } = req.body;
   try {
     const projectInfo = await Project.findById(id);
