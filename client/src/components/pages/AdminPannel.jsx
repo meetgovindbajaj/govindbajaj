@@ -106,7 +106,7 @@ const AdminPannel = () => {
     myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJh");
     const fd = new FormData();
     fd.append("image", await resizeFile(file), file.name);
-    const res = await axios.post("/image/upload", fd, {
+    const res = await axios.post(/* link */, fd, {
       headers: myHeaders,
       onUploadProgress: (progressEvent) => {
         let percent = Math.floor(progressEvent.progress * 100);
@@ -122,7 +122,7 @@ const AdminPannel = () => {
         id: info?._id,
         updatedInfo: { image: data.id },
       };
-      const reqUpdate = await axios.post("/info/update", req, {
+      const reqUpdate = await axios.post(/* link */, req, {
         onUploadProgress: (progressEvent) => {
           let percent = Math.floor(progressEvent.progress * 100);
           swal({
@@ -145,7 +145,7 @@ const AdminPannel = () => {
       id: info?._id,
       updatedInfo: updateInfo,
     };
-    const res = await axios.post("/info/update", req, {
+    const res = await axios.post(/* link */, req, {
       onUploadProgress: (progressEvent) => {
         let percent = Math.floor(progressEvent.progress * 100);
         swal({
@@ -191,7 +191,7 @@ const AdminPannel = () => {
       myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJh");
       const fd = new FormData();
       fd.append("image", await resizeFile(fileProject), fileProject.name);
-      const res = await axios.post("/image/upload", fd, {
+      const res = await axios.post(/* link */, fd, {
         headers: myHeaders,
         onUploadProgress: (progressEvent) => {
           let percent = Math.floor(progressEvent.progress * 100);
@@ -204,7 +204,7 @@ const AdminPannel = () => {
       if (res.status === 200) {
         const data = res.data;
         projectUpload.image = data.id;
-        const reqUpload = await axios.post("/project/create", projectUpload, {
+        const reqUpload = await axios.post(/* link */, projectUpload, {
           onUploadProgress: (progressEvent) => {
             let percent = Math.floor(progressEvent.progress * 100);
             swal({
