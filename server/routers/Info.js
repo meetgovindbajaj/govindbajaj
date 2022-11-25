@@ -3,7 +3,7 @@ const router = express.Router();
 const Info = require("../models/Info");
 const { deleteImage } = require("../utils/gridFs");
 // @router get user infomation
-router.get("/", async (req, res) => {
+router.get(/* link */, async (req, res) => {
   try {
     const info = await Info.find({});
     if (info) {
@@ -24,7 +24,7 @@ router.get("/", async (req, res) => {
       .json({ status: 500, error: true, message: error, info: {} });
   }
 });
-router.get("/image", async (req, res) => {
+router.get(/* link */, async (req, res) => {
   try {
     const info = await Info.find({}, { image: 1 });
     if (info) {
@@ -36,7 +36,7 @@ router.get("/image", async (req, res) => {
     return res.status(500).redirect("/image/undefined");
   }
 });
-router.post("/check", async (req, res) => {
+router.post(/* link */, async (req, res) => {
   try {
     const { passcode } = req.body;
     const data = await Info.find({}, { passcode: 1 });
@@ -52,7 +52,7 @@ router.post("/check", async (req, res) => {
     return res.status(500).json({ status: 500, error: true, message: error });
   }
 });
-router.post("/set", async (req, res) => {
+router.post(/* link */, async (req, res) => {
   try {
     const setInfo = req.body;
     const info = new Info(setInfo);
@@ -74,7 +74,7 @@ router.post("/set", async (req, res) => {
   }
 });
 // @router update user information
-router.post("/update", async (req, res) => {
+router.post(/* link */, async (req, res) => {
   try {
     const { id, updatedInfo } = req.body;
     const userinfo = await Info.findById(id);
