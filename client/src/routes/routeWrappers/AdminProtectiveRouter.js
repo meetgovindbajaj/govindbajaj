@@ -44,7 +44,7 @@ const AdminProtectiveRouter = ({ children }) => {
     setHeaderInfo(header[4]);
     setChecking(true);
     try {
-      const res = await fetch("/info/check", {
+      const res = await fetch(/* link */, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
