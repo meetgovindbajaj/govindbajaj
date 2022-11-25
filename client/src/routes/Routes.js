@@ -19,14 +19,13 @@ const Routers = () => {
             <Routes
               children={
                 <>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/test" element={<Regular />} />
+                  <Route path=/* link */ element={<Home />} />
+                  <Route path=/* link */ element={<Projects />} />
+                  <Route path=/* link */ element={<Contact />} />
+                  <Route path=/* link */ element={<About />} />
                   <Route path="*" element={<Error />} />
                   <Route
-                    path="/admin"
+                    path=/* link */
                     element={
                       <AdminProtectiveRouter children={<AdminPannel />} />
                     }
