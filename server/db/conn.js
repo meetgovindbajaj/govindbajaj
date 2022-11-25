@@ -10,7 +10,7 @@ const server = () => {
     mongoose.connect(DB, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
-      appName: "SansHerbal",
+      appName: "myWebsite",
     });
     const database = mongoose.connection;
     database.once("open", () => {
