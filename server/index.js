@@ -46,9 +46,9 @@ app.use(
   })
 );
 app.use(morgan("dev"));
-app.use("/info", info_router);
-app.use("/image", image_router);
-app.use("/project", project_router);
+app.use(/* link */, info_router);
+app.use(/* link */, image_router);
+app.use(/* link */, project_router);
 if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
   app.get("*", function (request, response) {
