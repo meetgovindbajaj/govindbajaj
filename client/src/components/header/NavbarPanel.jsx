@@ -137,22 +137,22 @@ const NewNavbarPanel = () => {
           >
             <ul className="d-flex align-items-center">
               <li>
-                <NavLink onClick={handleToggle} to={"/"}>
+                <NavLink onClick={handleToggle} to={/* link */}>
                   Profile
                 </NavLink>
               </li>
               <li>
-                <NavLink onClick={handleToggle} to={"/projects"}>
+                <NavLink onClick={handleToggle} to={/* link */}>
                   Projects
                 </NavLink>
               </li>
               <li>
-                <NavLink onClick={handleToggle} to={"/about"}>
+                <NavLink onClick={handleToggle} to={/* link */}>
                   About
                 </NavLink>
               </li>
               <li>
-                <NavLink onClick={handleToggle} to={"/contact"}>
+                <NavLink onClick={handleToggle} to={/* link */}>
                   Contact
                 </NavLink>
               </li>
