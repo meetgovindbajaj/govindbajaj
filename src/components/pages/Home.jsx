@@ -51,7 +51,7 @@ const Home = () => {
           <section className="home--section-left-img">
             {info?.image && (
               <img
-                src={`/api/image/${info?.image}`}
+                src={`${process.env.REACT_APP_SERVER}/api/image/${info?.image}`}
                 alt={info?.name}
                 className="round-img"
               />
