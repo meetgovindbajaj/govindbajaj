@@ -54,6 +54,10 @@ const Home = () => {
                 src={`${process.env.REACT_APP_SERVER}/api/image/${info?.image}`}
                 alt={info?.name}
                 className="round-img"
+                onError={() => {
+                  this.onerror = null;
+                  this.src = `${process.env.REACT_APP_SERVER}/api/image/${info?.image}`;
+                }}
               />
             )}
           </section>
