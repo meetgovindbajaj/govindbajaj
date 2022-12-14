@@ -67,10 +67,7 @@ const CustomCard = ({
             height="100%"
             src={img}
             alt={name}
-            onError={() => {
-              this.onerror = null;
-              this.src = img;
-            }}
+            onError={(event)=>event.target.setAttribute("src",img)}
           />
         </section>
       )}
