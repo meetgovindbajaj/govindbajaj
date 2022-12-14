@@ -51,7 +51,7 @@ const Home = () => {
           <section className="home--section-left-img">
             {info?.image && (
               <img
-                src={`/image/${info?.image}`}
+                src={`/api/image/${info?.image}`}
                 alt={info?.name}
                 className="round-img"
               />
