@@ -46,7 +46,7 @@ const App = () => {
   const getInfo = async () => {
     dispatch(setInitLoadingTrue());
     try {
-      const res = await fetch(/* link */, {
+      const res = await fetch(`${process.env.REACT_APP_SERVER}/api/info`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const App = () => {
   const getProjects = async () => {
     dispatch(setInitLoadingTrue());
     try {
-      const res = await fetch(/* link */, {
+      const res = await fetch(`${process.env.REACT_APP_SERVER}/api/project`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

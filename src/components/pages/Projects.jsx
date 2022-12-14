@@ -51,7 +51,7 @@ const Projects = () => {
                 <CustomCard
                   key={`project-${project?._id}`}
                   id={project?._id}
-                  img={`/image/${project?.image}`}
+                  img={`${process.env.REACT_APP_SERVER}/api/image/${project?.image}`}
                   date={project?.date}
                   name={project?.name}
                   desc={project?.desc}

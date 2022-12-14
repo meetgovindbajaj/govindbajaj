@@ -106,7 +106,7 @@ const AdminPannel = () => {
     myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJh");
     const fd = new FormData();
     fd.append("image", await resizeFile(file), file.name);
-    const res = await axios.post(/* link */, fd, {
+    const res = await axios.post(`${process.env.REACT_APP_SERVER}/api/image/upload`, fd, {
       headers: myHeaders,
       onUploadProgress: (progressEvent) => {
         let percent = Math.floor(progressEvent.progress * 100);
@@ -122,7 +122,7 @@ const AdminPannel = () => {
         id: info?._id,
         updatedInfo: { image: data.id },
       };
-      const reqUpdate = await axios.post(/* link */, req, {
+      const reqUpdate = await axios.post(`${process.env.REACT_APP_SERVER}/api/info/update`, req, {
         onUploadProgress: (progressEvent) => {
           let percent = Math.floor(progressEvent.progress * 100);
           swal({
@@ -145,7 +145,7 @@ const AdminPannel = () => {
       id: info?._id,
       updatedInfo: updateInfo,
     };
-    const res = await axios.post(/* link */, req, {
+    const res = await axios.post(`${process.env.REACT_APP_SERVER}/api/info/update`, req, {
       onUploadProgress: (progressEvent) => {
         let percent = Math.floor(progressEvent.progress * 100);
         swal({
@@ -191,7 +191,7 @@ const AdminPannel = () => {
       myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJh");
       const fd = new FormData();
       fd.append("image", await resizeFile(fileProject), fileProject.name);
-      const res = await axios.post(/* link */, fd, {
+      const res = await axios.post(`${process.env.REACT_APP_SERVER}/api/image/upload`, fd, {
         headers: myHeaders,
         onUploadProgress: (progressEvent) => {
           let percent = Math.floor(progressEvent.progress * 100);
@@ -204,15 +204,19 @@ const AdminPannel = () => {
       if (res.status === 200) {
         const data = res.data;
         projectUpload.image = data.id;
-        const reqUpload = await axios.post(/* link */, projectUpload, {
-          onUploadProgress: (progressEvent) => {
-            let percent = Math.floor(progressEvent.progress * 100);
-            swal({
-              text: `Creating New Project... ${percent}%`,
-              ...swalOptions,
-            });
-          },
-        });
+        const reqUpload = await axios.post(
+          `${process.env.REACT_APP_SERVER}/api/project/create`,
+          projectUpload,
+          {
+            onUploadProgress: (progressEvent) => {
+              let percent = Math.floor(progressEvent.progress * 100);
+              swal({
+                text: `Creating New Project... ${percent}%`,
+                ...swalOptions,
+              });
+            },
+          }
+        );
         if (reqUpload.status === 200) {
           dispatch(setProjects(reqUpload.data.projects));
           setFileProject(null);
@@ -264,7 +268,7 @@ const AdminPannel = () => {
             <Grid container spacing={1.5} sx={{ my: 3 }}>
               <Grid item xs={12} sx={{ display: "grid", placeItems: "center" }}>
                 <img
-                  src={`/image/${info?.image}`}
+                  src={`${process.env.REACT_APP_SERVER}/api/image/${info?.image}`}
                   alt={info?.name + "image"}
                   style={{ padding: "1rem" }}
                   className="round-img"
@@ -721,7 +725,7 @@ const AdminPannel = () => {
                   <CustomCard
                     key={`adminProject-${project?._id}`}
                     id={project?._id}
-                    img={`/image/${project?.image}`}
+                    img={`${process.env.REACT_APP_SERVER}/api/image/${project?.image}`}
                     date={project?.date}
                     name={project?.name}
                     desc={project?.desc}

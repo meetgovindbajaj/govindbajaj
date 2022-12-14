@@ -25,7 +25,7 @@ const CustomCard = ({
   };
   const handleDelete = async () => {
     const reqDel = await axios.post(
-      /* link */,
+      `${process.env.REACT_APP_SERVER}/api/project/delete`,
       { id },
       {
         onUploadProgress: () => {
