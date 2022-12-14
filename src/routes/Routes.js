@@ -7,7 +7,6 @@ import Wrapper from "../functions/errorWrapper/Wrapper.js";
 import Projects from "../components/pages/Projects.jsx";
 import Contact from "../components/pages/Contact.jsx";
 import About from "../components/pages/About.jsx";
-import Regular from "../components/pages/Regular.jsx";
 import AdminProtectiveRouter from "./routeWrappers/AdminProtectiveRouter.js";
 import AdminPannel from "../components/pages/AdminPannel.jsx";
 const Routers = () => {
@@ -23,7 +22,6 @@ const Routers = () => {
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/about" element={<About />} />
-                  <Route path="/test" element={<Regular />} />
                   <Route path="*" element={<Error />} />
                   <Route
                     path="/admin"
