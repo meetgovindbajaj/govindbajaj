@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import axios from "axios";
-import React from "react";
+import React,{useState} from "react";
 import { useDispatch } from "react-redux";
 import swal from "sweetalert";
 import { setProjects } from "../../context/features/Reducer";
@@ -20,6 +20,7 @@ const CustomCard = ({
   del = false,
 }) => {
   const dispatch = useDispatch();
+  const [errored, setErrored] = useState(false);
   const onClick = () => {
     window.open(link);
   };
@@ -67,7 +68,12 @@ const CustomCard = ({
             height="100%"
             src={img}
             alt={name}
-            onError={(event)=>event.target.setAttribute("src",img)}
+            onError={(event)=>{
+              if(!errored){
+                setErrored((errored) => errored = true);
+                event.target.setAttribute("src",img)
+              }
+            }}
           />
         </section>
       )}

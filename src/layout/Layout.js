@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
               setVidError(true);
             }}
             autoPlay
+            playsinline
             muted
             style={{ pointerEvents: "none" }}
             src={backgroundVideo}
