@@ -67,6 +67,7 @@ const CustomCard = ({
             width="100%"
             height="100%"
             src={img}
+            loading="lazy"
             alt={name}
             onError={(event)=>{
               if(!errored){

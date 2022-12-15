@@ -1,0 +1,69 @@
+{
+  "name": "Govind Bajaj's Portpholio",
+  "short_name": "Govind Bajaj",
+  "start_url": "https://govindbajaj.vercel.app",
+  "icons": [
+    {
+      "src": "https://govindbajajserver.vercel.app/api/info/image",
+      "type": "image/x-icon",
+      "sizes": "64x64 32x32 24x24 16x16"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Govind Bajaj's Info0",
+      "short_name": "My Info",
+      "description": "View my information",
+      "url": "https://govindbajaj.vercel.app",
+      "icons": [
+        {
+          "src": "https://govindbajajserver.vercel.app/api/info/image",
+          "type": "image/x-icon",
+          "sizes": "64x64 32x32 24x24 16x16"
+        }
+      ]
+    },
+    {
+      "name": "Govind Bajaj's Projects",
+      "short_name": "My Projects",
+      "description": "View my projects",
+      "url": "https://govindbajaj.vercel.app/projects",
+      "icons": [
+        {
+          "src": "https://govindbajajserver.vercel.app/api/info/image",
+          "type": "image/x-icon",
+          "sizes": "64x64 32x32 24x24 16x16"
+        }
+      ]
+    },
+    {
+      "name": "Govind Bajaj's About Info",
+      "short_name": "About Me",
+      "description": "Know More About Me",
+      "url": "https://govindbajaj.vercel.app/about",
+      "icons": [
+        {
+          "src": "https://govindbajajserver.vercel.app/api/info/image",
+          "type": "image/x-icon",
+          "sizes": "64x64 32x32 24x24 16x16"
+        }
+      ]
+    },
+    {
+      "name": "Govind Bajaj's Contact",
+      "short_name": "Contact Me",
+      "description": "Get In Touch",
+      "url": "https://govindbajaj.vercel.app/contact",
+      "icons": [
+        {
+          "src": "https://govindbajajserver.vercel.app/api/info/image",
+          "type": "image/x-icon",
+          "sizes": "64x64 32x32 24x24 16x16"
+        }
+      ]
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#000000"
+}
