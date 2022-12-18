@@ -1,7 +1,8 @@
 {
   "name": "Govind Bajaj's Portpholio",
   "short_name": "Govind Bajaj",
-  "start_url": "https://govindbajaj.vercel.app",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "https://govindbajajserver.vercel.app/api/info/image",

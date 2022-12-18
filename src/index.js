@@ -5,6 +5,7 @@ import App from "./app/App";
 import "./css/App.css";
 import store from "./context/store/globalStore";
 import { Provider } from "react-redux";
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const Apps = () => {
   return (
@@ -16,3 +17,4 @@ const Apps = () => {
   );
 };
 root.render(<Apps />);
+serviceWorkerRegistration.unregister();
