@@ -17,4 +17,4 @@ const Apps = () => {
   );
 };
 root.render(<Apps />);
-serviceWorkerRegistration.unregister();
+serviceWorkerRegistration.register();

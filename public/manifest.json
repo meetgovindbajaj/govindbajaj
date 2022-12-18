@@ -1,13 +1,27 @@
 {
   "name": "Govind Bajaj's Portpholio",
   "short_name": "Govind Bajaj",
-  "start_url": "/",
+  "start_url": ".",
   "scope": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#000000",
   "icons": [
     {
       "src": "https://govindbajajserver.vercel.app/api/info/image",
-      "type": "image/x-icon",
-      "sizes": "64x64 32x32 24x24 16x16"
+      "type": "image/png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://govindbajajserver.vercel.app/api/info/image",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://govindbajajserver.vercel.app/api/info/image",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "shortcuts": [
@@ -63,8 +77,5 @@
         }
       ]
     }
-  ],
-  "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#000000"
+  ]
 }
